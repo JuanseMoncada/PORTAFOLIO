@@ -1,395 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <!-- ===== METADATOS ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portafolio</title>
-    <meta name="description" content="Free open source Tailwind CSS Store template">
-    <meta name="keywords"
-        content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
+    <meta name="description" content="Portafolio profesional de desarrollo de software">
+    <meta name="keywords" content="desarrollador, programador, spring boot, python, java, sql server, bizagi">
+    <meta name="author" content="Tu Nombre">
 
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!-- ===== FUENTES DE GOOGLE ===== -->
+    <!-- Work Sans -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+    <!-- Henny Penny -->
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <!-- Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- DM Serif Display -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- ===== HOJAS DE ESTILO ===== -->
+    <!-- Font Awesome 6 (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/Style-Header.css">
     <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
-    <!--MENU-->
-    <section id="INICIO">
-        <div class="SECTION mx-auto">
-            <nav id="header" class="header fixed top-0 left-0 w-full z-10 bg-white shadow">
-                <div class="container mx-auto">
-                    <label for="menu-toggle" class="cursor-pointer md:hidden block">
-                        <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="30"
-                            height="30" viewBox="0 0 20 20">
-                            <title>Portafolio</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                        </svg>
-                    </label>
-                    <input class="hidden" type="checkbox" id="menu-toggle" />
-                    <div class="hidden md:flex md:items-center justify-center  md:order-1" id="menu">
-                        <nav>
-                            <ul class="md:flex">
-                                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                                        href="#INICIO">Inicio</a></li>
-                                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                                        href="#ACERCA-DE-MI">Acerca De Mi</a></li>
-                                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                                        href="#PROYECTOS">Mis Proyectos</a></li>
-                                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                                        href="#HABILIDADES">Habilidades</a></li>
-                                <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                                        href="#CONTACTO">Contacto</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </section>
+    <div class="Contenedor_Principal">
 
-    <!-- MENU -->
+        <!-- MENU -->
+        <section class="seccion" id="INICIO">
+            <div class="nav-container">
+                <nav id="header" class="main-nav">
+                    <div class="nav-wrapper">
+                        <label for="menu-toggle" class="menu-label">
+                            <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                viewBox="0 0 20 20">
+                                <title>Portafolio</title>
+                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                            </svg>
+                        </label>
+                        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                        <div id="menu" class="menu-content">
+                            <nav>
+                                <ul class="nav-list">
+                                    <li class="nav-item">
+                                        <a href="#INICIO" class="nav-link">
+                                            <span class="nav-sphere home"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#ACERCA-DE-MI" class="nav-link">
+                                            <span class="nav-sphere about"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#HABILIDADES" class="nav-link">
+                                            <span class="nav-sphere skills"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#PROYECTOS" class="nav-link">
+                                            <span class="nav-sphere projects"></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#CONTACTO" class="nav-link">
+                                            <span class="nav-sphere contact"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
 
-    <!-- TARJETA DE INFORMACION -->
-    <section id="ACERCA-DE-MI">
-        <div class="SECTION mx-auto">
-            <div class="carousel-container">
-    
-                <input type="radio" name="carousel" id="carousel-1" checked>
-                <input type="radio" name="carousel" id="carousel-2">
-                <input type="radio" name="carousel" id="carousel-3">
-                <div class="IMAGEN2">
-                    <img src="img/osito.png" alt="" srcset="">
-                </div>
-    
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <div class="content">
-                            <p class="titulo">Hola, soy Sebastian Moncada Yaya
-                            <p class="titulo">Un Desarrollador Back-End </p>
-                            <p class="titulo">y Front-End junior</p>
-                            <p class="enlace">
-                                <a href="mailto:sebasmoncaday@gmail.com">
-                                    <i class="fas fa-envelope"></i> sebasmoncaday@gmail.com
-                                </a>
-                            </p>
+        <!-- TARJETA DE INFORMACION -->
+        <section class="seccion" id="ACERCA-DE-MI">
+            <div class="about-section">
+                <div class="carousel-container" id="mainCarousel">
+
+                    <!-- Track del carrusel -->
+                    <div class="carousel-track" id="carouselTrack">
+
+                        <!-- Slide 1 - Presentacion Personal -->
+                        <div class="carousel-slide slide-1">
+                            <div class="slide-content">
+                                <div class="sphere-wrapper slide-1-wrapper">
+                                    <div class="avatar-sphere slide-1-sphere">
+                                        <img src="img/osito.png" alt="Sebastian Moncada" class="avatar-image" />
+                                    </div>
+                                </div>
+                                <div class="info-text">
+                                    <h2 class="main-title">Hola, soy<br />Sebastian Moncada</h2>
+                                    <p class="sub-title">Desarrollador Java Spring Boot</p>
+                                    <a href="mailto:sebasmoncaday@gmail.com" class="contact-link">
+                                        <i class="fas fa-envelope"></i> sebasmoncaday@gmail.com
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="content">
-                            <p class="titulo">WhatsApp</p>
-                            <p class="enlace">
-                                <a href="https://wa.me/573227754757">
-                                    <i class="fab fa-whatsapp"></i> 322-775-4757
-                                </a>
-                            </p>
-                            <p class="enlace">
-                                <a href="https://wa.me/573245128901">
-                                    <i class="fab fa-whatsapp"></i> 324-512-8901
-                                </a>
-                            </p>
+
+                        <!-- Slide 2 - WhatsApp -->
+                        <div class="carousel-slide slide-2">
+                            <div class="slide-content">
+                                <div class="sphere-wrapper slide-2-wrapper">
+                                    <div class="avatar-sphere slide-2-sphere">
+                                        <i class="fab fa-whatsapp social-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="info-text">
+                                    <h2 class="main-title">WhatsApp</h2>
+                                    <p class="sub-title">Contactame directamente</p>
+                                    <a href="https://wa.me/573227754757" class="contact-link" target="_blank"
+                                        rel="noopener">
+                                        <i class="fab fa-whatsapp"></i> 322-775-4757
+                                    </a>
+                                    <a href="https://wa.me/573245128901" class="contact-link" target="_blank"
+                                        rel="noopener">
+                                        <i class="fab fa-whatsapp"></i> 324-512-8901
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="content">
-                            <p class="titulo">LinkedIn</p>
-                            <p class="enlace">
-                                <a href="https://www.linkedin.com/in/sebastian-moncaday-3117a92a8">
-                                    <i class="fab fa-linkedin"></i> Mi perfil de LinkedIn
-                                </a>
-                            </p>
-                            <p class="titulo">GitHub</p>
-                            <p class="enlace">
-                                <a href="https://github.com/sebasyounko990?tab=repositories">
-                                    <i class="fab fa-github"></i> Mi perfil de GitHub
-                                </a>
-                            </p>
+
+                        <!-- Slide 3 - LinkedIn & GitHub -->
+                        <div class="carousel-slide slide-3">
+                            <div class="slide-content">
+                                <div class="sphere-wrapper slide-3-wrapper">
+                                    <div class="avatar-sphere slide-3-sphere">
+                                        <i class="fab fa-linkedin social-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="info-text">
+                                    <h2 class="main-title">LinkedIn &amp; GitHub</h2>
+                                    <p class="sub-title">Redes profesionales</p>
+                                    <a href="https://www.linkedin.com/in/sebastian-moncaday-3117a92a8"
+                                        class="contact-link" target="_blank" rel="noopener">
+                                        <i class="fab fa-linkedin"></i> Mi perfil de LinkedIn
+                                    </a>
+                                    <a href="https://github.com/sebasyounko990?tab=repositories" class="contact-link"
+                                        target="_blank" rel="noopener">
+                                        <i class="fab fa-github"></i> Mi perfil de GitHub
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+
+                    </div><!-- /carousel-track -->
+
+                    <!-- Flechas de navegacion -->
+                    <div class="carousel-arrows">
+                        <button class="arrow-btn" id="prevBtn" aria-label="Anterior">&#8249;</button>
+                        <button class="arrow-btn" id="nextBtn" aria-label="Siguiente">&#8250;</button>
+                    </div>
+
+                    <!-- Barra de progreso -->
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+
+                </div><!-- /carousel-container -->
+
+                <!-- Puntos indicadores (fuera del container para evitar overflow:hidden) -->
+                <div class="carousel-dots" id="carouselDots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+
+            </div><!-- /about-section -->
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="seccion habi" id="HABILIDADES">
+            <div class="habi-header">
+                <a href="#" id="acerca">Habilidades...</a>
+            </div>
+
+            <div class="Habilidades-requeridas">
+                <!-- Java -->
+                <div class="habilidades-1">
+                    <div class="contenido">
+                        <i class="fab fa-java"></i>
+                        <p>Java</p>
                     </div>
                 </div>
-    
-                <div class="controls">
-                    <label for="carousel-1" class="control"></label>
-                    <label for="carousel-2" class="control"></label>
-                    <label for="carousel-3" class="control"></label>
+                <!-- Spring Boot con SVG -->
+                <div class="habilidades-1">
+                    <div class="contenido">
+                        <i class="fab fa-java"></i>
+                        <p>Spring Boot</p>
+                    </div>
                 </div>
-    
-                <div class="arrows">
-                    <label for="carousel-1" class="prev">&#10094;</label>
-                    <label for="carousel-2" class="prev">&#10094;</label>
-                    <label for="carousel-3" class="prev">&#10094;</label>
-                    <label for="carousel-1" class="next">&#10095;</label>
-                    <label for="carousel-2" class="next">&#10095;</label>
-                    <label for="carousel-3" class="next">&#10095;</label>
+                <!-- JavaScript -->
+                <div class="habilidades-0">
+                    <div class="contenido">
+                        <i class="fab fa-js-square"></i>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <!-- Node.js -->
+                <div class="habilidades-2">
+                    <div class="contenido">
+                        <i class="fab fa-node-js"></i>
+                        <p>Node.js</p>
+                    </div>
+                </div>
+                <!-- SQL Server -->
+                <div class="habilidades-2">
+                    <div class="contenido">
+                        <i class="fas fa-database"></i>
+                        <p>SQL Server</p>
+                    </div>
+                </div>
+                <!-- TomCat -->
+                <div class="habilidades-3">
+                    <div class="contenido">
+                        <i class="fas fa-server"></i>
+                        <p>TomCat</p>
+                    </div>
+                </div>
+                <!-- Bizagi -->
+                <div class="habilidades-2">
+                    <div class="contenido">
+                        <i class="fas fa-project-diagram"></i>
+                        <p>Bizagi</p>
+                    </div>
+                </div>
+                <!-- PHP -->
+                <div class="habilidades-4">
+                    <div class="contenido">
+                        <i class="fab fa-php"></i>
+                        <p>PHP</p>
+                    </div>
+                </div>
+                <!-- Python -->
+                <div class="habilidades-1">
+                    <div class="contenido">
+                        <i class="fab fa-python"></i>
+                        <p>Python</p>
+                    </div>
+                </div>
+                <!-- CSS3 -->
+                <div class="habilidades-5">
+                    <div class="contenido">
+                        <i class="fab fa-css3-alt"></i>
+                        <p>CSS3</p>
+                    </div>
+                </div>
+                <!-- HTML5 -->
+                <div class="habilidades-6">
+                    <div class="contenido">
+                        <i class="fab fa-html5"></i>
+                        <p>HTML5</p>
+                    </div>
+                </div>
+                <!-- IBM Cloud -->
+                <div class="habilidades-7">
+                    <div class="contenido">
+                        <i class="fas fa-cloud"></i>
+                        <p>IBM Cloud</p>
+                    </div>
+                </div>
+                <!-- Ajax -->
+                <div class="habilidades-8">
+                    <div class="contenido">
+                        <i class="fas fa-sync"></i>
+                        <p>Ajax</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- TARJETA DE INFORMACION -->
+        </section>
 
-<section>
-    <div class="IMAGEN">
-        <img src="img/gatico.png" alt="">
+        <!-- PROYECTOS -->
+        <section class="proyectos-section" id="PROYECTOS">
+            <div class="proyectos-container">
+
+                <!-- Encabezado -->
+                <div class="proyectos-header">
+                    <a href="#" id="acerca">Proyectos</a>
+                </div>
+
+                <!-- Grid de 4 proyectos (2 columnas) -->
+                <div class="proyectos-grid">
+
+                    <!-- ============================================= -->
+                    <!-- PROYECTO 1 -->
+                    <!-- ============================================= -->
+                    <div class="proyecto-card proyecto-card-1">
+                        <div class="proyecto-burbuja">
+                            <div class="proyecto-burbuja-inner">
+                                <i class="fas fa-store"></i>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">E-commerce API</h3>
+                            <p class="proyecto-descripcion">
+                                API RESTful para tienda online con autenticación JWT,
+                                carrito de compras y pasarela de pago integrada.
+                            </p>
+                            <div class="proyecto-tecnologias">
+                                <span class="tecnologia">Java</span>
+                                <span class="tecnologia">Spring Boot</span>
+                                <span class="tecnologia">MySQL</span>
+                                <span class="tecnologia">JWT</span>
+                            </div>
+                            <div class="proyecto-enlaces">
+                                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+                                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================= -->
+                    <!-- PROYECTO 2 -->
+                    <!-- ============================================= -->
+                    <div class="proyecto-card proyecto-card-2">
+                        <div class="proyecto-burbuja">
+                            <div class="proyecto-burbuja-inner">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">Chatbot IA</h3>
+                            <p class="proyecto-descripcion">
+                                Asistente virtual con procesamiento de lenguaje natural
+                                para atención al cliente 24/7.
+                            </p>
+                            <div class="proyecto-tecnologias">
+                                <span class="tecnologia">Python</span>
+                                <span class="tecnologia">TensorFlow</span>
+                                <span class="tecnologia">Flask</span>
+                                <span class="tecnologia">NLTK</span>
+                            </div>
+                            <div class="proyecto-enlaces">
+                                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+                                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================= -->
+                    <!-- PROYECTO 3 -->
+                    <!-- ============================================= -->
+                    <div class="proyecto-card proyecto-card-3">
+                        <div class="proyecto-burbuja">
+                            <div class="proyecto-burbuja-inner">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">Dashboard Analytics</h3>
+                            <p class="proyecto-descripcion">
+                                Panel de control interactivo con visualización de datos
+                                en tiempo real y reportes personalizados.
+                            </p>
+                            <div class="proyecto-tecnologias">
+                                <span class="tecnologia">React</span>
+                                <span class="tecnologia">D3.js</span>
+                                <span class="tecnologia">Node.js</span>
+                                <span class="tecnologia">MongoDB</span>
+                            </div>
+                            <div class="proyecto-enlaces">
+                                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+                                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================= -->
+                    <!-- PROYECTO 4 -->
+                    <!-- ============================================= -->
+                    <div class="proyecto-card proyecto-card-4">
+                        <div class="proyecto-burbuja">
+                            <div class="proyecto-burbuja-inner">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                        <div class="proyecto-info">
+                            <h3 class="proyecto-titulo">App Fitness</h3>
+                            <p class="proyecto-descripcion">
+                                Aplicación móvil para seguimiento de entrenamientos,
+                                con rutinas personalizadas y métricas de rendimiento.
+                            </p>
+                            <div class="proyecto-tecnologias">
+                                <span class="tecnologia">Flutter</span>
+                                <span class="tecnologia">Firebase</span>
+                                <span class="tecnologia">Dart</span>
+                                <span class="tecnologia">REST API</span>
+                            </div>
+                            <div class="proyecto-enlaces">
+                                <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
+                                <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /proyectos-grid -->
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="seccion contacto-section" id="CONTACTO">
+            <div class="contacto-container">
+
+                <!-- Encabezado -->
+                <div class="contacto-header">
+                    <a href="#" id="contacto-link">Contacto</a>
+                </div>
+
+                <!-- Tarjeta de contacto -->
+                <div class="contacto-card">
+                    <div class="contacto-grid">
+
+                        <!-- Columna izquierda - Información -->
+                        <div class="contacto-info">
+                            <h3 class="contacto-title">¡Hablemos!</h3>
+                            <p class="contacto-descripcion">
+                                Estoy disponible para nuevos proyectos, colaboraciones o simplemente para charlar.
+                                No dudes en contactarme.
+                            </p>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icon-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contacto-item-text">
+                                    <span class="contacto-item-label">Correo electrónico</span>
+                                    <a href="mailto:sebasmoncaday@gmail.com"
+                                        class="contacto-item-value">sebasmoncaday@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icon-wrapper">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="contacto-item-text">
+                                    <span class="contacto-item-label">WhatsApp</span>
+                                    <a href="https://wa.me/573227754757" class="contacto-item-value" target="_blank"
+                                        rel="noopener">322-775-4757</a>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icon-wrapper">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contacto-item-text">
+                                    <span class="contacto-item-label">GitHub</span>
+                                    <a href="https://github.com/sebasyounko990?tab=repositories"
+                                        class="contacto-item-value" target="_blank" rel="noopener">sebasyonko99</a>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icon-wrapper">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="contacto-item-text">
+                                    <span class="contacto-item-label">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/sebastian-moncaday-3117a92a8"
+                                        class="contacto-item-value" target="_blank" rel="noopener">sebasmoncaday</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna derecha - Esfera decorativa -->
+                        <div class="contacto-esfera-wrapper">
+                            <div class="contacto-esfera">
+                                <i class="fas fa-paper-plane contacto-esfera-icono"></i>
+                            </div>
+                            <div class="contacto-esfera-onda"></div>
+                            <div class="contacto-esfera-onda contacto-esfera-onda-2"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </div>
-</section>
 
+    <script>
+        (function () {
+            const TOTAL_SLIDES = 3;
+            const AUTOPLAY_INTERVAL = 4000; // 4 segundos
 
+            const track = document.getElementById('carouselTrack');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dots = document.querySelectorAll('.dot');
+            const progressBar = document.getElementById('progressBar');
+            const container = document.getElementById('mainCarousel');
 
-    <section class="bg-white py-8" id="PROYECTOS">
-        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-            <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-                <a class="custom-class" href="#" id="acerca">Proyectos</a>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="dat">
-                <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                    <a href="#">
-                        <div class="img">
-                            <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                            <div class="info">
-                                <div class="pt-3 flex items-center justify-between">
-                                    <p class="">Product Name</p>
-                                    <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                                    </svg>
-                                </div>
-                                <p class="pt-1 text-gray-900">£9.99</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+            let currentIndex = 0;
+            let autoplayTimer = null;
+            let progressTimer = null;
+            let progressStart = null;
+            let isUserInteracting = false;
+            let interactionTimeout = null;
 
-    <!-- HABILIDADES -->
-    <section class="bg-white py-8 habi" id="HABILIDADES">
-        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-            <a class="custom-class" href="#" id="acerca">Habilidades...</a>
-        </div>
-        <div class="Habilidades-requeridas">
-            <div class="habilidades-0">
-                <div class="contenido">
-                    <i class="fab fa-js-square"></i>
-                    <p>JavaScript</p>
-                </div>
-            </div>
-            <div class="habilidades-1">
-                <div class="contenido">
-                    <i class="fab fa-java"></i>
-                    <p>Java</p>
-                </div>
-            </div>
-            <div class="habilidades-2">
-                <div class="contenido">
-                    <i class="fab fa-node-js"></i>
-                    <p>Node.js</p>
-                </div>
-            </div>
-            <div class="habilidades-3">
-                <div class="contenido">
-                    <i class="fas fa-server"></i>
-                    <p>TomCat</p>
-                </div>
-            </div>
-            <div class="habilidades-4">
-                <div class="contenido">
-                    <i class="fab fa-php"></i>
-                    <p>PHP</p>
-                </div>
-            </div>
-            <div class="habilidades-5">
-                <div class="contenido">
-                    <i class="fab fa-css3-alt"></i>
-                    <p>CSS3</p>
-                </div>
-            </div>
-            <div class="habilidades-6">
-                <div class="contenido">
-                    <i class="fab fa-html5"></i>
-                    <p>HTML5</p>
-                </div>
-            </div>
-            <div class="habilidades-7">
-                <div class="contenido">
-                    <i class="fas fa-cloud"></i>
-                    <p>IBM Cloud</p>
-                </div>
-            </div>
-            <div class="habilidades-8">
-                <div class="contenido">
-                    <i class="fas fa-sync"></i>
-                    <p>Ajax</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- HABILIDADES -->
+            /* ---- Ir a un slide ---- */
+            function goTo(index) {
+                // Circular
+                if (index < 0) index = TOTAL_SLIDES - 1;
+                if (index >= TOTAL_SLIDES) index = 0;
+                currentIndex = index;
 
+                // Mover track
+                track.style.transform = 'translateX(-' + (currentIndex * 33.3333) + '%)';
 
-    <!-- CONTACTO -->
-    <section id="CONTACTO">
-        <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
-            <div class="container flex px-3 py-8 ">
-                <div class="w-full mx-auto flex flex-wrap">
-                    <div class="flex w-full lg:w-1/2 ">
-                        <div class="px-3 md:px-0">
-                            <h3 class="font-bold text-gray-900">Contacteme</h3>
-                            <p class="py-4"><i class="fas fa-envelope"></i>Correo: sebasmoncaday@gmail.com</p>
-                            <p class="py-4"><i class="fab fa-whatsapp"></i>Numero: telefonico: 322-775-4757</p>
-                            <p class="py-4"><i class="fab fa-github"></i>GitHub: sebasyonko99</p>
-                            <p class="py-4"><i class="fab fa-linkedin"></i>LinkedIn: sebasmoncaday</p>
-                        </div>
-                    </div>
-                    <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
-                        <div class="px-3 md:px-0">
-                            <h3 class="font-bold text-gray-900">
-                                <p>Creado
-                            </h3>
-                            <ul class="list-reset items-center pt-3">
-                                <li>
-                                    <a class="inline-block no-underline hover:text-black hover:underline py-1"
-                                        href="#">Sebastian Moncada<p></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </section>
-    <!-- CONTACTO -->
+                // Actualizar dots
+                dots.forEach(function (dot, i) {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
 
+            /* ---- Progreso visual ---- */
+            function startProgress() {
+                clearProgress();
+                progressStart = performance.now();
+                progressBar.style.transition = 'none';
+                progressBar.style.width = '0%';
 
+                // Forzar reflow
+                progressBar.getBoundingClientRect();
+
+                progressBar.style.transition = 'width ' + AUTOPLAY_INTERVAL + 'ms linear';
+                progressBar.style.width = '100%';
+            }
+
+            function clearProgress() {
+                progressBar.style.transition = 'none';
+                progressBar.style.width = '0%';
+            }
+
+            /* ---- Autoplay ---- */
+            function startAutoplay() {
+                stopAutoplay();
+                startProgress();
+                autoplayTimer = setInterval(function () {
+                    if (!isUserInteracting) {
+                        goTo(currentIndex + 1);
+                        startProgress();
+                    }
+                }, AUTOPLAY_INTERVAL);
+            }
+
+            function stopAutoplay() {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+                clearProgress();
+            }
+
+            function pauseForInteraction() {
+                isUserInteracting = true;
+                stopAutoplay();
+                clearTimeout(interactionTimeout);
+                // Reanudar autoplay despues de 6 segundos de inactividad
+                interactionTimeout = setTimeout(function () {
+                    isUserInteracting = false;
+                    startAutoplay();
+                }, 6000);
+            }
+
+            /* ---- Botones ---- */
+            prevBtn.addEventListener('click', function () {
+                goTo(currentIndex - 1);
+                pauseForInteraction();
+            });
+
+            nextBtn.addEventListener('click', function () {
+                goTo(currentIndex + 1);
+                pauseForInteraction();
+            });
+
+            /* ---- Dots ---- */
+            dots.forEach(function (dot) {
+                dot.addEventListener('click', function () {
+                    var idx = parseInt(dot.getAttribute('data-index'), 10);
+                    goTo(idx);
+                    pauseForInteraction();
+                });
+            });
+
+            /* ---- Pause on hover ---- */
+            container.addEventListener('mouseenter', function () {
+                if (autoplayTimer) {
+                    clearInterval(autoplayTimer);
+                    // Pausar barra
+                    var computedWidth = window.getComputedStyle(progressBar).width;
+                    var containerWidth = progressBar.parentElement.offsetWidth;
+                    var widthPct = (parseFloat(computedWidth) / containerWidth) * 100;
+                    progressBar.style.transition = 'none';
+                    progressBar.style.width = widthPct + '%';
+                }
+            });
+
+            container.addEventListener('mouseleave', function () {
+                if (!isUserInteracting) {
+                    // Reanudar desde donde quedo
+                    var currentPct = parseFloat(progressBar.style.width) || 0;
+                    var remaining = AUTOPLAY_INTERVAL * (1 - currentPct / 100);
+                    progressBar.style.transition = 'width ' + remaining + 'ms linear';
+                    progressBar.style.width = '100%';
+                    clearInterval(autoplayTimer);
+                    autoplayTimer = setInterval(function () {
+                        goTo(currentIndex + 1);
+                        startProgress();
+                    }, remaining);
+                }
+            });
+
+            /* ---- Touch swipe ---- */
+            var touchStartX = 0;
+            var touchEndX = 0;
+
+            container.addEventListener('touchstart', function (e) {
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+
+            container.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].clientX;
+                var diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        goTo(currentIndex + 1);
+                    } else {
+                        goTo(currentIndex - 1);
+                    }
+                    pauseForInteraction();
+                }
+            }, { passive: true });
+
+            /* ---- Iniciar ---- */
+            goTo(0);
+            startAutoplay();
+
+        })();
+    </script>
 
 </body>
 
