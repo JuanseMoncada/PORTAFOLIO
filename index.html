@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- ===== METADATOS ===== -->
     <meta charset="UTF-8">
@@ -16,7 +15,11 @@
     <!-- Work Sans -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
     <!-- Henny Penny -->
-    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet"> -->
+     <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+
+
     <!-- Nunito -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- DM Serif Display -->
@@ -29,10 +32,49 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/Style-Header.css">
+    <link rel="stylesheet" href="css/Style-Fondo-Ondas.css">
     <link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
+
+    <!-- ============================================
+         FONDO INTERACTIVO - BURBUJAS Y ONDAS
+    ============================================= -->
+    <div class="fondo-interactivo" aria-hidden="true">
+
+        <!-- Capa de ondas -->
+        <div class="ondas-fondo">
+            <span class="onda onda-1"></span>
+            <span class="onda onda-2"></span>
+            <span class="onda onda-3"></span>
+            <span class="onda onda-4"></span>
+        </div>
+
+        <!-- Burbujas -->
+        <div class="burbujas-fondo">
+
+            <span class="burbuja burbuja-1"></span>
+            <span class="burbuja burbuja-2"></span>
+            <span class="burbuja burbuja-3"></span>
+            <span class="burbuja burbuja-4"></span>
+            <span class="burbuja burbuja-5"></span>
+            <span class="burbuja burbuja-6"></span>
+            <span class="burbuja burbuja-7"></span>
+            <span class="burbuja burbuja-8"></span>
+
+        </div>
+
+        <!-- Brillos ambientales -->
+        <div class="brillo-fondo brillo-1"></div>
+        <div class="brillo-fondo brillo-2"></div>
+
+    </div>
+
+
+    <!-- ============================================
+         CONTENIDO ACTUAL DE TU PORTAFOLIO
+    ============================================= -->
 
     <div class="Contenedor_Principal">
 
@@ -126,10 +168,6 @@
                                         rel="noopener">
                                         <i class="fab fa-whatsapp"></i> 322-775-4757
                                     </a>
-                                    <a href="https://wa.me/573245128901" class="contact-link" target="_blank"
-                                        rel="noopener">
-                                        <i class="fab fa-whatsapp"></i> 324-512-8901
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -145,11 +183,11 @@
                                 <div class="info-text">
                                     <h2 class="main-title">LinkedIn &amp; GitHub</h2>
                                     <p class="sub-title">Redes profesionales</p>
-                                    <a href="https://www.linkedin.com/in/sebastian-moncaday-3117a92a8"
+                                    <a href="https://www.linkedin.com/in/juan-sebastian-moncada-yaya-3117a92a8/"
                                         class="contact-link" target="_blank" rel="noopener">
                                         <i class="fab fa-linkedin"></i> Mi perfil de LinkedIn
                                     </a>
-                                    <a href="https://github.com/sebasyounko990?tab=repositories" class="contact-link"
+                                    <a href="https://github.com/JuanseMoncada" class="contact-link"
                                         target="_blank" rel="noopener">
                                         <i class="fab fa-github"></i> Mi perfil de GitHub
                                     </a>
@@ -266,25 +304,11 @@
                         <p>HTML5</p>
                     </div>
                 </div>
-                <!-- IBM Cloud -->
-                <div class="habilidades-7">
-                    <div class="contenido">
-                        <i class="fas fa-cloud"></i>
-                        <p>IBM Cloud</p>
-                    </div>
-                </div>
-                <!-- Ajax -->
-                <div class="habilidades-8">
-                    <div class="contenido">
-                        <i class="fas fa-sync"></i>
-                        <p>Ajax</p>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- PROYECTOS -->
-        <section class="proyectos-section" id="PROYECTOS">
+        <section class="seccion" id="PROYECTOS">
             <div class="proyectos-container">
 
                 <!-- Encabezado -->
@@ -314,7 +338,6 @@
                                 <span class="tecnologia">Java</span>
                                 <span class="tecnologia">Spring Boot</span>
                                 <span class="tecnologia">MySQL</span>
-                                <span class="tecnologia">JWT</span>
                             </div>
                             <div class="proyecto-enlaces">
                                 <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
@@ -339,10 +362,10 @@
                                 para atención al cliente 24/7.
                             </p>
                             <div class="proyecto-tecnologias">
-                                <span class="tecnologia">Python</span>
-                                <span class="tecnologia">TensorFlow</span>
-                                <span class="tecnologia">Flask</span>
-                                <span class="tecnologia">NLTK</span>
+                                <span class="tecnologia">Java</span>
+                                <span class="tecnologia">Spring AI</span>
+                                <span class="tecnologia">Spring boot</span>
+                                <span class="tecnologia">SQL Server</span>
                             </div>
                             <div class="proyecto-enlaces">
                                 <a href="#" class="proyecto-link"><i class="fab fa-github"></i> Código</a>
@@ -354,7 +377,7 @@
                     <!-- ============================================= -->
                     <!-- PROYECTO 3 -->
                     <!-- ============================================= -->
-                    <div class="proyecto-card proyecto-card-3">
+                    <!-- <div class="proyecto-card proyecto-card-3">
                         <div class="proyecto-burbuja">
                             <div class="proyecto-burbuja-inner">
                                 <i class="fas fa-chart-line"></i>
@@ -377,12 +400,12 @@
                                 <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- ============================================= -->
                     <!-- PROYECTO 4 -->
                     <!-- ============================================= -->
-                    <div class="proyecto-card proyecto-card-4">
+                    <!-- <div class="proyecto-card proyecto-card-4">
                         <div class="proyecto-burbuja">
                             <div class="proyecto-burbuja-inner">
                                 <i class="fas fa-mobile-alt"></i>
@@ -405,14 +428,14 @@
                                 <a href="#" class="proyecto-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div><!-- /proyectos-grid -->
             </div>
         </section>
 
         <!-- CONTACTO -->
-        <section class="seccion contacto-section" id="CONTACTO">
+        <section class="seccion" id="CONTACTO">
             <div class="contacto-container">
 
                 <!-- Encabezado -->
@@ -460,7 +483,7 @@
                                 </div>
                                 <div class="contacto-item-text">
                                     <span class="contacto-item-label">GitHub</span>
-                                    <a href="https://github.com/sebasyounko990?tab=repositories"
+                                    <a href="https://github.com/JuanseMoncada"
                                         class="contacto-item-value" target="_blank" rel="noopener">sebasyonko99</a>
                                 </div>
                             </div>
@@ -471,7 +494,7 @@
                                 </div>
                                 <div class="contacto-item-text">
                                     <span class="contacto-item-label">LinkedIn</span>
-                                    <a href="https://www.linkedin.com/in/sebastian-moncaday-3117a92a8"
+                                    <a href="https://www.linkedin.com/in/juan-sebastian-moncada-yaya-3117a92a8/"
                                         class="contacto-item-value" target="_blank" rel="noopener">sebasmoncaday</a>
                                 </div>
                             </div>
@@ -493,6 +516,7 @@
         </section>
 
     </div>
+
 
     <script>
         (function () {

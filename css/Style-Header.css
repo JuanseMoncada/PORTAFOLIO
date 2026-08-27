@@ -1,28 +1,35 @@
-/* === RESET Y ESTILOS BASE === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================================================
+   TIPOGRAFÍA DEL HEADER / MENÚ
+   Fuente: Henny Penny
+========================================================= */
+.nav-container, .nav-wrapper, .nav-list, .nav-item, .nav-link, .nav-sphere, .menu-label, .menu-content, .nav-sphere::after {
+    font-family: 'Macondo Swash Caps', cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-body {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+
+/* =========================================================
+   CONTENEDOR ESTÁTICO
+========================================================= */
+
+#INICIO {
+    position: relative;
+    z-index: 1001;
 }
 
-/* === CONTENEDOR ESTÁTICO === */
 .nav-container {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 15%;
+    width: 70%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: #3B1C32;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-    padding: 20px 0;
+    padding: 10px 0;
+    border-radius: 20px 20px 20px 20px;
 }
-
 .nav-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -32,8 +39,9 @@ body {
     align-items: center;
     position: relative;
 }
-
-/* === MENÚ HAMBURGUESA (MÓVIL) === */
+/* =========================================================
+   MENÚ HAMBURGUESA - MÓVIL
+========================================================= */
 .menu-label {
     display: none;
     cursor: pointer;
@@ -43,18 +51,17 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
-
 .menu-icon {
     fill: #4a4a4a;
     width: 30px;
     height: 30px;
 }
-
 .menu-toggle {
     display: none;
 }
-
-/* === LISTA DE NAVEGACIÓN === */
+/* =========================================================
+   LISTA DE NAVEGACIÓN
+========================================================= */
 .nav-list {
     display: flex;
     list-style: none;
@@ -64,14 +71,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .nav-item {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-/* === ESFERAS (BOLAS) === */
+/* =========================================================
+   ESFERAS / BOTONES DEL MENÚ
+========================================================= */
 .nav-sphere {
     display: flex;
     align-items: center;
@@ -84,40 +91,34 @@ body {
     position: relative;
     text-decoration: none;
 }
-
-/* Tamaño de las esferas en hover */
+/* =========================================================
+   HOVER DE LAS ESFERAS
+========================================================= */
 .nav-sphere:hover {
     transform: scale(1.15) translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(192, 192, 192, 0.482);
 }
-
-/* === COLORES PASTEL PARA CADA ESFERA === */
+/* =========================================================
+   COLORES DE LAS ESFERAS
+========================================================= */
 .home {
-    background: linear-gradient(135deg, #ffb3ba, #ff8a9b);
-    /* Rosa pastel */
+    background: linear-gradient( 135deg, #7A1E3A, #C24A6A );
 }
-
 .about {
-    background: linear-gradient(135deg, #baffc9, #8bddb0);
-    /* Verde pastel */
+    background: linear-gradient( 135deg, #7A1E3A, #C24A6A );
 }
-
 .projects {
-    background: linear-gradient(135deg, #bae1ff, #87b9e8);
-    /* Azul pastel */
+    background: linear-gradient( 135deg, #7A1E3A, #C24A6A );
 }
-
 .skills {
-    background: linear-gradient(135deg, #ffd1dc, #f5a8b8);
-    /* Rosado claro */
+    background: linear-gradient( 135deg, #7A1E3A, #C24A6A );
 }
-
 .contact {
-    background: linear-gradient(135deg, #e8d5f5, #d4a8e8);
-    /* Lila pastel */
+    background: linear-gradient( 135deg, #7A1E3A, #C24A6A );
 }
-
-/* === ICONOS DENTRO DE LAS ESFERAS (usando SVG inline) === */
+/* =========================================================
+   ICONOS DENTRO DE LAS ESFERAS
+========================================================= */
 .nav-sphere::before {
     content: '';
     display: block;
@@ -129,33 +130,39 @@ body {
     filter: brightness(0) invert(1);
     opacity: 0.9;
 }
-
-/* Icono Casa (Inicio) */
+/* =========================================================
+   ICONO CASA - INICIO
+========================================================= */
 .home::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/%3E%3C/svg%3E");
 }
-
-/* Icono Persona (Acerca de mí) */
+/* =========================================================
+   ICONO PERSONA - ACERCA DE MÍ
+========================================================= */
 .about::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z'/%3E%3C/svg%3E");
 }
-
-/* Icono Portafolio (Proyectos) */
+/* =========================================================
+   ICONO PORTAFOLIO - PROYECTOS
+========================================================= */
 .projects::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h16c1.1 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z'/%3E%3C/svg%3E");
 }
-
-/* Icono Estrella (Habilidades) */
+/* =========================================================
+   ICONO ESTRELLA - HABILIDADES
+========================================================= */
 .skills::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
 }
-
-/* Icono Correo (Contacto) */
+/* =========================================================
+   ICONO CORREO - CONTACTO
+========================================================= */
 .contact::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
 }
-
-/* === TOOLTIP (Texto al hacer hover) === */
+/* =========================================================
+   TOOLTIP
+========================================================= */
 .nav-sphere::after {
     content: attr(data-label);
     position: absolute;
@@ -166,83 +173,130 @@ body {
     color: white;
     padding: 4px 12px;
     border-radius: 6px;
+    /* Henny Penny */
+    font-family: 'Macondo Swash Caps', cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 12px;
     white-space: nowrap;
     transition: all 0.3s ease;
     pointer-events: none;
     opacity: 0;
 }
-
+/* =========================================================
+   TOOLTIP - HOVER
+========================================================= */
 .nav-sphere:hover::after {
     transform: translateX(-50%) scale(1);
     opacity: 1;
 }
-
-/* Asignar texto a cada esfera */
+/* =========================================================
+   TEXTOS DE LOS TOOLTIPS
+========================================================= */
 .home::after {
     content: 'Inicio';
 }
-
 .about::after {
     content: 'Acerca de mí';
 }
-
 .projects::after {
     content: 'Proyectos';
 }
-
 .skills::after {
     content: 'Habilidades';
 }
-
 .contact::after {
     content: 'Contacto';
 }
-
-/* === RESPONSIVE (Móvil) === */
+/* =========================================================
+   RESPONSIVE - TABLET / MÓVIL
+========================================================= */
 @media (max-width: 768px) {
+    .nav-container {
+        left: 12px;
+        width: calc(100% - 24px);
+    }
     .menu-label {
         display: block;
     }
-
     .menu-content {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
+        background: transparent;
+        backdrop-filter: none;
         padding: 20px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: none;
     }
-
-    .menu-toggle:checked+.menu-content {
+    /* Mostrar menú cuando se activa el checkbox */
+    .menu-toggle:checked + .menu-content {
         display: block;
     }
-
+    /* Burbujas en fila al abrir el menú */
     .nav-list {
-        flex-direction: column;
-        gap: 25px;
+        flex-direction: row;
+        gap: 10px;
     }
-
+    /* Burbujas compactas para móvil */
     .nav-sphere {
-        width: 70px;
-        height: 70px;
+        width: 46px;
+        height: 46px;
     }
-
+    /* Iconos compactos */
     .nav-sphere::before {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
     }
-
+    /* Tooltip móvil */
     .nav-sphere::after {
         bottom: -30px;
+        font-family: 'Macondo Swash Caps', cursive;
         font-size: 13px;
+        font-weight: 400;
     }
 }
-
-/* === ANIMACIÓN DE ENTRADA === */
+/* =========================================================
+   RESPONSIVE - PANTALLAS PEQUEÑAS
+========================================================= */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 10px 0;
+        background: #3b1c3200;
+    }
+    .nav-wrapper {
+        padding: 0 15px;
+    }
+    .menu-label {
+        left: 10px;
+    }
+    .menu-icon {
+        width: 26px;
+        height: 26px;
+    }
+    .menu-content {
+        padding: 12px 0;
+    }
+    .nav-list {
+        gap: 7px;
+    }
+    .nav-sphere {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-sphere::before {
+        width: 22px;
+        height: 22px;
+    }
+    .nav-sphere::after {
+        font-size: 12px;
+        bottom: -28px;
+    }
+}
+/* =========================================================
+   ANIMACIÓN DE ENTRADA
+========================================================= */
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -254,11 +308,12 @@ body {
         transform: translateY(0px);
     }
 }
-
 .nav-sphere {
     animation: float 4s ease-in-out infinite;
 }
-
+/* =========================================================
+   RETRASO DE ANIMACIÓN POR ELEMENTO
+========================================================= */
 .nav-item:nth-child(2) .nav-sphere {
     animation-delay: 0.2s;
 }
