@@ -1,0 +1,924 @@
+/* =========================================================
+   FONDO INTERACTIVO
+   Paleta:
+   #7A1E3A  -> vino oscuro
+   #C24A6A  -> rosa vino
+   #F2D7DE  -> rosa muy claro
+   #341522  -> complemento oscuro
+   #8F3150  -> complemento
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    --vino-oscuro: #7A1E3A;
+    --vino: #C24A6A;
+    --rosa-claro: #F2D7DE;
+
+    /* Colores complementarios */
+    --vino-profundo: #341522;
+    --vino-medio: #8F3150;
+
+    /* Fondo */
+    --fondo-principal: #09070A;
+    --fondo-secundario: #120B0F;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(122, 30, 58, 0.12),
+            transparent 45%
+        ),
+        var(--fondo-principal);
+
+    color: var(--rosa-claro);
+
+    font-family: 'Henny Penny', cursive;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   FONDO INTERACTIVO
+   ========================================================= */
+
+.fondo-interactivo {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -10;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(122, 30, 58, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(194, 74, 106, 0.06),
+            transparent 35%
+        );
+
+}
+
+
+/* =========================================================
+   CONTENEDOR DE BURBUJAS
+   ========================================================= */
+
+.burbujas-fondo {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* =========================================================
+   BURBUJAS
+   ========================================================= */
+
+.burbuja {
+
+    position: absolute;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(242, 215, 222, 0.32),
+            rgba(194, 74, 106, 0.14) 35%,
+            rgba(122, 30, 58, 0.08) 65%,
+            transparent 75%
+        );
+
+    border: 1px solid rgba(242, 215, 222, 0.12);
+
+    box-shadow:
+
+        inset 0 0 30px rgba(242, 215, 222, 0.04),
+
+        0 0 40px rgba(122, 30, 58, 0.10);
+
+    backdrop-filter: blur(2px);
+
+    -webkit-backdrop-filter: blur(2px);
+
+    opacity: 0.7;
+
+    transform: translate3d(0, 0, 0);
+
+}
+
+
+/* =========================================================
+   BURBUJA 1
+   ========================================================= */
+
+.burbuja-1 {
+
+    width: 280px;
+    height: 280px;
+
+    left: -90px;
+    top: 12%;
+
+    animation:
+        flotar-1 18s ease-in-out infinite,
+        pulso-burbuja 8s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   BURBUJA 2
+   ========================================================= */
+
+.burbuja-2 {
+
+    width: 180px;
+    height: 180px;
+
+    right: 8%;
+    top: 8%;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            rgba(242, 215, 222, 0.25),
+            rgba(194, 74, 106, 0.12) 40%,
+            transparent 75%
+        );
+
+    animation:
+        flotar-2 15s ease-in-out infinite,
+        pulso-burbuja 7s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   BURBUJA 3
+   ========================================================= */
+
+.burbuja-3 {
+
+    width: 110px;
+    height: 110px;
+
+    left: 22%;
+    top: 42%;
+
+    animation:
+        flotar-3 13s ease-in-out infinite,
+        pulso-burbuja 6s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   BURBUJA 4
+   ========================================================= */
+
+.burbuja-4 {
+
+    width: 360px;
+    height: 360px;
+
+    right: -140px;
+    top: 35%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(194, 74, 106, 0.16),
+            rgba(122, 30, 58, 0.09) 50%,
+            transparent 75%
+        );
+
+    animation:
+        flotar-4 20s ease-in-out infinite,
+        pulso-burbuja 9s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   BURBUJA 5
+   ========================================================= */
+
+.burbuja-5 {
+
+    width: 150px;
+    height: 150px;
+
+    left: 8%;
+    bottom: 12%;
+
+    animation:
+        flotar-5 17s ease-in-out infinite,
+        pulso-burbuja 7s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   BURBUJA 6
+   ========================================================= */
+
+.burbuja-6 {
+
+    width: 90px;
+    height: 90px;
+
+    right: 25%;
+    bottom: 15%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(242, 215, 222, 0.28),
+            rgba(194, 74, 106, 0.13) 45%,
+            transparent 75%
+        );
+
+    animation:
+        flotar-6 11s ease-in-out infinite,
+        pulso-burbuja 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   BURBUJA 7
+   ========================================================= */
+
+.burbuja-7 {
+
+    width: 230px;
+    height: 230px;
+
+    left: 45%;
+    top: -100px;
+
+    animation:
+        flotar-7 19s ease-in-out infinite,
+        pulso-burbuja 8s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   BURBUJA 8
+   ========================================================= */
+
+.burbuja-8 {
+
+    width: 130px;
+    height: 130px;
+
+    right: 5%;
+    bottom: 5%;
+
+    animation:
+        flotar-8 14s ease-in-out infinite,
+        pulso-burbuja 6s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   ONDAS
+   ========================================================= */
+
+.ondas-fondo {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   ONDA BASE
+   ========================================================= */
+
+.onda {
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(194, 74, 106, 0.12);
+
+    box-shadow:
+
+        0 0 40px rgba(122, 30, 58, 0.06),
+
+        inset 0 0 40px rgba(194, 74, 106, 0.04);
+
+    animation: onda-expandir 10s ease-out infinite;
+
+}
+
+
+/* =========================================================
+   ONDAS INDIVIDUALES
+   ========================================================= */
+
+.onda-1 {
+
+    animation-delay: 0s;
+
+}
+
+
+.onda-2 {
+
+    animation-delay: 2.5s;
+
+}
+
+
+.onda-3 {
+
+    animation-delay: 5s;
+
+}
+
+
+.onda-4 {
+
+    animation-delay: 7.5s;
+
+}
+
+
+/* =========================================================
+   BRILLOS AMBIENTALES
+   ========================================================= */
+
+.brillo-fondo {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.15;
+
+    pointer-events: none;
+
+}
+
+
+/* BRILLO 1 */
+
+.brillo-1 {
+
+    width: 350px;
+    height: 350px;
+
+    background: var(--vino-oscuro);
+
+    left: 15%;
+    top: 20%;
+
+    animation: brillo-movimiento-1 18s ease-in-out infinite;
+
+}
+
+
+/* BRILLO 2 */
+
+.brillo-2 {
+
+    width: 300px;
+    height: 300px;
+
+    background: var(--vino);
+
+    right: 10%;
+    bottom: 15%;
+
+    animation: brillo-movimiento-2 20s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   ANIMACIONES DE BURBUJAS
+   ========================================================= */
+
+@keyframes flotar-1 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate3d(40px, -35px, 0);
+    }
+
+    50% {
+        transform: translate3d(80px, 20px, 0);
+    }
+
+    75% {
+        transform: translate3d(30px, 55px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes flotar-2 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-60px, 50px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes flotar-3 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    33% {
+        transform: translate3d(35px, -40px, 0);
+    }
+
+    66% {
+        transform: translate3d(-25px, 30px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes flotar-4 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-80px, -50px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes flotar-5 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(50px, -70px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes flotar-6 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-45px, -35px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes flotar-7 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-50px, 60px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes flotar-8 {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-60px, -50px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+/* =========================================================
+   PULSO DE LAS BURBUJAS
+   ========================================================= */
+
+@keyframes pulso-burbuja {
+
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 0.85;
+    }
+
+}
+
+
+/* =========================================================
+   EXPANSIÓN DE ONDAS
+   ========================================================= */
+
+@keyframes onda-expandir {
+
+    0% {
+
+        width: 100px;
+        height: 100px;
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 0.8;
+
+    }
+
+    100% {
+
+        width: 900px;
+        height: 900px;
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOVIMIENTO DE BRILLOS
+   ========================================================= */
+
+@keyframes brillo-movimiento-1 {
+
+    0%,
+    100% {
+
+        transform: translate3d(0, 0, 0);
+
+    }
+
+    50% {
+
+        transform: translate3d(120px, 80px, 0);
+
+    }
+
+}
+
+
+@keyframes brillo-movimiento-2 {
+
+    0%,
+    100% {
+
+        transform: translate3d(0, 0, 0);
+
+    }
+
+    50% {
+
+        transform: translate3d(-100px, -80px, 0);
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTENIDO DEL PORTAFOLIO
+   ========================================================= */
+
+.Contenedor_Principal {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.seccion {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* =========================================================
+   EVITAR QUE LOS FONDOS DE LAS SECCIONES
+   TAPEN LAS BURBUJAS
+   ========================================================= */
+
+.about-section,
+.habi,
+.proyectos-container,
+.contacto-container {
+
+    position: relative;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .burbuja-1 {
+
+        width: 220px;
+        height: 220px;
+
+    }
+
+    .burbuja-4 {
+
+        width: 280px;
+        height: 280px;
+
+    }
+
+    .burbuja-7 {
+
+        width: 180px;
+        height: 180px;
+
+    }
+
+    .onda {
+
+        width: 220px;
+        height: 220px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .burbuja-1 {
+
+        width: 150px;
+        height: 150px;
+
+        left: -60px;
+
+    }
+
+    .burbuja-2 {
+
+        width: 100px;
+        height: 100px;
+
+        right: -20px;
+
+    }
+
+    .burbuja-3 {
+
+        width: 70px;
+        height: 70px;
+
+    }
+
+    .burbuja-4 {
+
+        width: 180px;
+        height: 180px;
+
+        right: -90px;
+
+    }
+
+    .burbuja-5 {
+
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .burbuja-6 {
+
+        width: 60px;
+        height: 60px;
+
+    }
+
+    .burbuja-7 {
+
+        width: 120px;
+        height: 120px;
+
+    }
+
+    .burbuja-8 {
+
+        width: 80px;
+        height: 80px;
+
+    }
+
+
+    .onda {
+
+        width: 150px;
+        height: 150px;
+
+    }
+
+
+    .brillo-fondo {
+
+        filter: blur(60px);
+
+        opacity: 0.10;
+
+    }
+
+
+    @keyframes onda-expandir {
+
+        0% {
+
+            width: 50px;
+            height: 50px;
+
+            opacity: 0;
+
+        }
+
+        20% {
+
+            opacity: 0.6;
+
+        }
+
+        100% {
+
+            width: 500px;
+            height: 500px;
+
+            opacity: 0;
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   Si el usuario tiene activado reducir movimiento,
+   eliminamos las animaciones.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .burbuja,
+    .onda,
+    .brillo-fondo {
+
+        animation: none !important;
+
+    }
+
+}
